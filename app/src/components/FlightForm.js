@@ -1,60 +1,45 @@
 import React, { useState } from "react"
 import "./FlightForm.scss"
 
+import RouteForm from "./RouteForm"
+import DateForm from "./DateForm"
+import PassengersForm from "./PassengersForm"
+
 const FlightForm = (props) => {
-    const [origen, setOrigen] = useState("")
-    const [destino, setDestino] = useState("")
-    const [desde, setDesde] = useState("")
-    const [hasta, setHasta] = useState("")
-    const [pasajeros, setPasajeros] = useState("")
+    const [to, setTo] = useState("")
+    const [from, setFrom] = useState("")
+    const [departing, setDeparting] = useState("")
+    const [returning, setReturning] = useState("")
+    const [passengers, setPassengers] = useState("1")
+
+    const search = e => {
+        e.preventDefault()
+    }
 
     return (
         <div className="form-container">
-            <div className="form-title">
-                <h1>Cheap flights</h1>
-            </div>
-            <div className="flight-information">
-                <form>
-                    <label htmlFor="origen">Origen</label>
-                    <input 
-                        id="origen"
-                        type="text" 
-                        placeholder="Origen" 
-                        value={origen}
-                        onChange={e => setOrigen(e.target.value)}
+            <div className="flight-form-container">
+                <div className="form-title">
+                    <h1>Cheap flights</h1>
+                </div>
+                <form onSubmit={e => search(e)}>
+                    <RouteForm 
+                        setTo={setTo} 
+                        setFrom={setFrom} 
+                        to={to} 
+                        from={from}
                     />
-                    <label htmlFor="destino">Destino</label>
-                    <input 
-                        id="destino" 
-                        type="text" 
-                        placeholder="Destino" 
-                        value={destino}
-                        onChange={e => setDestino(e.target.value)}
+                    <DateForm 
+                        setDeparting={setDeparting} 
+                        setReturning={setReturning} 
+                        departing={departing} 
+                        returning={returning}
                     />
-                    <label htmlFor="desde">Fechas</label>
-                    <input 
-                        id="desde" 
-                        type="text" 
-                        placeholder="Desde" 
-                        value={desde}
-                        onChange={e => setDesde(e.target.value)}
+                    <PassengersForm 
+                        setPassengers={setPassengers}
+                        passengers={passengers}
                     />
-                    <input 
-                        id="destino" 
-                        type="text" 
-                        placeholder="Hasta" 
-                        value={hasta}
-                        onChange={e => setHasta(e.target.value)}
-                    />
-                    <label htmlFor="pasajeros">Pasajeros</label>
-                    <input 
-                        id="pasajeros" 
-                        type="text" 
-                        placeholder="Pasajeros" 
-                        value={pasajeros}
-                        onChange={e => setPasajeros(e.target.value)}
-                    />
-                    <button>Buscar</button>
+                    <button onClick={e => search(e)}>Search</button>
                 </form>
             </div>  
         </div>
