@@ -1,0 +1,28 @@
+@import './constants.scss';
+
+.app {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 62.5%;
+
+  .navigation-bar {
+    height: 75px;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  .content-container {
+    width: 100%;
+    height: 300px; //50px is the height of the navigation-bar
+    display: flex;
+    align-items: center;
+    background: $bgPurple;
+    }
+}
