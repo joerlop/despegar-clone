@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Tooltip.scss"
 
 class Tooltip extends React.Component{
 
@@ -12,20 +13,14 @@ class Tooltip extends React.Component{
 
   render(){
     return(
-      <div className="ToolTip advanced">
-        <FormControl className="radio-buttons">
-          <FormLabel component="legend">Radio Buttons</FormLabel>
-          <RadioGroup
-            value={this.state.radio}
-            onChange={this.handleRadio}>
-            <FormControlLabel value="Radio 1" control={<Radio />} label="Radio 1" />
-            <FormControlLabel value="Radio 2" control={<Radio />} label="Radio 2" />
-            <FormControlLabel value="Radio 3" control={<Radio />} label="Radio 3" />
-          </RadioGroup>
-        </FormControl>
-
-        <Button variant="outlined" onClick={this.props.close}>Button</Button>
-      </div>
+        <div className="tooltip">
+            <div className="tooltip-title">
+                <h1>AIRPORTS</h1>
+            </div>
+            <div className="tooltip-content">
+                <p>Barranquilla</p>
+            </div>
+        </div>
     )
   }
 }

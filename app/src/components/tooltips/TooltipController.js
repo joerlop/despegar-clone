@@ -10,7 +10,7 @@ class ToolTipController extends React.PureComponent{
 
   static defaultProps = {
     offsetX: 0,
-    offsetY: 0,
+    offsetY: 25,
     detect: "click",
     closeOnClick: true,
     timeOut: null,
