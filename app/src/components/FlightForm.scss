@@ -22,15 +22,18 @@
     .flight-form-container {
         form {
             display: flex;
+            align-items: flex-end;
 
             .form-component {
                 display: flex;
+                margin-right: 5px;
             }
 
             .form-input {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                margin-left: 5px;
 
                 label {
                     font-size: 1.2em;
@@ -39,6 +42,24 @@
                     color: $lightGray;
                     margin-bottom: 5px;
                 }
+
+                input {
+                    padding: 0 15px;
+                    height: 45px;
+                    border-radius: 5px;
+                    border: 1px solid lighten($lightGray, 20%);
+                }
+            }
+            button {
+                margin-left: 10px;
+                border-radius: 25px;
+                font-size: 1.6em;
+                font-weight: bold;
+                width: 100px;
+                height: 45px;
+                background: $darkPurple;
+                border: 1px solid $darkPurple;
+                color: white;
             }
         }
     }
