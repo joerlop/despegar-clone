@@ -10,7 +10,7 @@ class ToolTipController extends React.PureComponent{
 
   static defaultProps = {
     offsetX: 0,
-    offsetY: 0,
+    offsetY: 25,
     detect: "click",
     closeOnClick: true,
     timeOut: null,
@@ -58,6 +58,7 @@ class ToolTipController extends React.PureComponent{
       }
 
       //Turn on the animation > adds the specific animation class
+      console.log(this.props.animation)
       if(this.props.animation !== ""){
         setTimeout(() => {
           this.setState({animate: true})

@@ -48,6 +48,22 @@
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid lighten($lightGray, 20%);
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    outline: none;
+                    transition: all .5s ease;
+
+                    &:focus {
+                        border: 1px solid $darkPurple;
+                    }
+                }
+
+                .input-date {
+                    width: 80px;
+                }
+
+                .input-passengers {
+                    width: 120px;
                 }
             }
             button {

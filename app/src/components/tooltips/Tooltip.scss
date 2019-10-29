@@ -1,0 +1,68 @@
+@import "../../constants.scss";
+
+.react-tooltip-absolute-container {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.tooltip {
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+  width: 350px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(68,68,68,0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    background-color: #EEEEEE;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  .tooltip-title {
+    background: #EEEEEE;
+    color: darken($darkGray, 10%);
+    width: 100%;
+    z-index: 2;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1pt;
+    margin-bottom: 5px;
+
+    h1 {
+      padding: 10px 15px;
+    }
+  }
+
+  .tooltip-content {
+    color: lighten($darkGray, 10%);
+    background: white;
+    width: 100%;
+    z-index: 2;
+    font-size: 1.6em;
+
+    p {
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:hover {
+        background: #EEEEEE;
+      }
+    }
+  }
+}

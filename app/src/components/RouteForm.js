@@ -1,16 +1,38 @@
 import React from "react";
 
+import Select from "./tooltips/Select"
+import TooltipController from "./tooltips/TooltipController"
+import Tooltip from "./tooltips/Tooltip"
+
 const RouteForm = (props) => {
+
+    const handleFocus = e => {
+        e.preventDefault();
+        e.target.select();
+    }
+
     return (
         <div className="form-component">
             <div className="form-input">
                 <label htmlFor="from">FROM</label>
-                <input 
-                    id="from"
-                    type="text"  
-                    value={props.from}
-                    onChange={e => props.setFrom(e.target.value)}
-                />
+                <TooltipController 
+                    animation="fadeIn" 
+                    duration="350ms" 
+                    timing="ease" 
+                    properties={["opacity"]}
+                >
+                    <Select>
+                        <input 
+                            id="from"
+                            type="text"
+                            autoComplete="off"  
+                            value={props.from}
+                            onChange={e => props.setFrom(e.target.value)}
+                            onFocus={e => handleFocus(e)}
+                        />
+                    </Select>
+                    <Tooltip setFrom={props.setFrom}/>
+                </TooltipController>
             </div>
             <div className="form-input">
                 <label htmlFor="to">TO</label>
