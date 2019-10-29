@@ -6,6 +6,7 @@ const DateForm = (props) => {
             <div className="form-input">
                 <label htmlFor="departing">DEPARTING</label>
                 <input 
+                    className="input-date"
                     id="departing" 
                     type="text" 
                     value={props.departing}
@@ -14,7 +15,8 @@ const DateForm = (props) => {
             </div>
             <div className="form-input">
                 <label htmlFor="returning">RETURNING</label>
-                <input 
+                <input
+                    className="input-date" 
                     id="returning" 
                     type="text"  
                     value={props.returning}

@@ -18,6 +18,9 @@ class Tooltip extends React.Component{
                 <h1>AIRPORTS</h1>
             </div>
             <div className="tooltip-content">
+                <p onClick={() => this.props.setFrom("Barranquilla")}>Barranquilla</p>
+                <p onClick={() => this.props.setFrom("Medellin")}>Medellin</p>
+                <p>Barranquilla</p>
                 <p>Barranquilla</p>
             </div>
         </div>

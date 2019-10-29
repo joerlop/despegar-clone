@@ -58,6 +58,7 @@ class ToolTipController extends React.PureComponent{
       }
 
       //Turn on the animation > adds the specific animation class
+      console.log(this.props.animation)
       if(this.props.animation !== ""){
         setTimeout(() => {
           this.setState({animate: true})

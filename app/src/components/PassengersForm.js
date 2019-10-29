@@ -5,6 +5,7 @@ const PassengersForm = (props) => {
         <div className="form-input">
             <label htmlFor="passengers">PASSENGERS</label>
             <input 
+                className="input-passengers"
                 id="passengers" 
                 type="text"  
                 value={props.passengers}

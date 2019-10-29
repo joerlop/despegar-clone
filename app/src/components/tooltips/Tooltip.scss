@@ -1,5 +1,13 @@
 @import "../../constants.scss";
 
+.react-tooltip-absolute-container {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
 .tooltip {
   font-size: 62.5%;
   font-family: 'Rubik', sans-serif;
@@ -28,20 +36,33 @@
 
   .tooltip-title {
     background: #EEEEEE;
+    color: darken($darkGray, 10%);
     width: 100%;
     z-index: 2;
     font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 1pt;
-    padding: 10px 15px;
+    margin-bottom: 5px;
+
+    h1 {
+      padding: 10px 15px;
+    }
   }
 
   .tooltip-content {
-    color: $darkGray;
+    color: lighten($darkGray, 10%);
     background: white;
     width: 100%;
     z-index: 2;
     font-size: 1.6em;
-    padding: 10px 15px;
+
+    p {
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:hover {
+        background: #EEEEEE;
+      }
+    }
   }
 }
