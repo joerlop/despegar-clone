@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "immer": "^4.0.2"
+    "immer": "^8.0.1"
   }
 }
